@@ -1,0 +1,123 @@
+/* Common layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 8px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* Heading */
+.for-h1-of-login {
+    margin-top: 70px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-h1-of-login h1 {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -4.15px;
+    color: rgba(0, 0, 0, 0.849);
+}
+
+/* Note */
+.for-p-note-for-filling {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(128, 128, 128);
+}
+
+.for-p-note-for-filling p {
+    font-size: 15px;
+}
+
+/* Input groups (shared styles) */
+.space-for-email,
+.space-for-password,
+.space-for-submit,
+.space-for-both-name,
+.space-for-phone {
+    margin-top: 25px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-for-both-name {
+    margin-top: 60px;
+    /* different margin for email field */
+}
+
+/* Inputs */
+.e-mail,
+.pass-code,
+.name,
+.phone {
+    width: 37%;
+    height: 45px;
+    font-size: 18px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Submit button */
+.submit {
+    width: 37%;
+    height: 45px;
+    font-size: 22px;
+    border: white 2px solid;
+    background-color: #ff8700;
+    box-sizing: border-box;
+}
+
+/* Footer links (register page) */
+.for-login,
+.for-new-acc {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-login p,
+.for-new-acc p {
+    font-size: 13px;
+    color: rgb(128, 128, 128);
+}
+
+.for-login span,
+.for-new-acc span {
+    visibility: hidden;
+}
+
+.for-login a,
+.for-new-acc a {
+    text-decoration: none;
+    border-bottom: 1.5px solid rgb(128, 128, 128);
+    width: fit-content;
+}

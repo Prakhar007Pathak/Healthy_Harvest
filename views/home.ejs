@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="RESPONSIVE/homeMedia.css">
+    <link rel="stylesheet" href="CSS/header-footer.css">
+    <link rel="stylesheet" href="RESPONSIVE/headerFooterMedia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include("partials/header") %>
+
+        <!-- MAIN -->
+        <main>
+            <!-- HIGHLIGHTED-PRODUCT -->
+            <div class="space-for-highlighted-product">
+                <div class="highlighted-product">
+                    <div class="next-button HL-product">
+                        <button class="prev-next-button left-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-left"
+                                viewBox="-20 -15 60 50">
+                                <path d="M17 7H2M8 1L2 7l6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="highlighted-product-list">
+                        <div class="product-1 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/{150}x{150}/?{home-made-food-product}" width="100"
+                                alt="first-product">
+                            <p>BRAND NAME 1</p>
+                        </div>
+                        <div class="product-2 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="second-product">
+                            <p>BRAND NAME 2</p>
+                        </div>
+                        <div class="product-3 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="third-product">
+                            <p>BRAND NAME 3</p>
+                        </div>
+                        <div class="product-4 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="fourth-product">
+                            <p>BRAND NAME 4</p>
+                        </div>
+                        <div class="product-5 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="fifth-product">
+                            <p>BRAND NAME 5</p>
+                        </div>
+                        <div class="product-6 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="sixth-product">
+                            <p>BRAND NAME 6</p>
+                        </div>
+                        <div class="product-7 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="seventh-product">
+                            <p>BRAND NAME 7</p>
+                        </div>
+                        <div class="product-8 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="eight-product">
+                            <p>BRAND NAME 8</p>
+                        </div>
+                        <div class="product-9 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="ninth-product">
+                            <p>BRAND NAME 9</p>
+                        </div>
+                        <div class="product-10 HL-product HL-now-for-logo"><img
+                                src="https://source.unsplash.com/150x150/? home-made-food-product" width="150"
+                                alt="tenth-product">
+                            <p>BRAND NAME 10</p>
+                        </div>
+                    </div>
+                    <div class="next-button HL-product">
+                        <button class="prev-next-button right-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-right"
+                                viewBox="-20 -15 60 50">
+                                <path d="M0 7h15M9 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- SLIDER -->
+            <div class="space-for-slider">
+                <div class="slider">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <!-- <div class="numbertext">1 / 3</div> -->
+                            <img src="https://source.unsplash.com/1348x449/? home-made-food-product-poster"
+                                style="width:100%">
+                            <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                        <div class="mySlides fade">
+                            <!-- <div class="numbertext">2 / 3</div> -->
+                            <img src="https://source.unsplash.com/1348x449/? home-food-product-poster"
+                                style="width:100%">
+                            <!-- <div class="text">Caption Two</div> -->
+                        </div>
+                        <div class="mySlides fade">
+                            <!-- <div class="numbertext">3 / 3</div> -->
+                            <img src="https://source.unsplash.com/1348x449/? food-product-poster " style="width:100%">
+                            <!-- <div class="text">Caption Three</div> -->
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- BESTSELLER HEADING AND LINKS -->
+            <div class="space-for-best-seller">
+                <div class="best-seller">
+                    <div class="text-container">
+                        <h3>OUR BESTSELLERS</h3>
+                    </div>
+                    <tabs-nav class="tabs-nav tabs-nav-center ">
+                        <div class="tabs-nav__item-list">
+                            <button type="button" class="tabs-nav__item heading" aria-expanded="true"
+                                aria-controls="block-template--17128539554113__featured-collections-collection-1"><a
+                                    href="#firstBestSeller">FIRST BESTSELLER</a></button>
+                            <button type="button" class="tabs-nav__item heading" aria-expanded="false"
+                                aria-controls="block-template--17128539554113__featured-collections-2fc94ba2-1234-44f7-a8e1-5d0b5cfda9ff"><a
+                                    href="#secondBestSeller">SECOND BESTSELLER</a></button>
+                            <button type="button" class="tabs-nav__item heading" aria-expanded="false"
+                                aria-controls="block-template--17128539554113__featured-collections-80234426-9fa7-4010-9f7b-22c4d528ba37"><a
+                                    href="#thirdBestSeller">THIRD BESTSELLER</a></button>
+                            <button type="button" class="tabs-nav__item heading" aria-expanded="false"
+                                aria-controls="block-template--17128539554113__featured-collections-f31cef92-cf4e-4332-b0bd-42d49d1c54c1"><a
+                                    href="#forthBestSeller">FORTH BESTSELLER</a></button>
+                        </div>
+                    </tabs-nav>
+
+                </div>
+            </div>
+            <!-- FIRST ROW OF PRODUCTS -->
+            <div class="space-for-all-bestseller actually-first-bestseller" id="firstBestSeller">
+                <h2 class="space-for-all-bestseller-for-h2">Type Of Food Of First Bestseller</h2>
+                <div class="first-bestseller">
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-ofBS">
+                        <button class="prev-next-button bestseller-left-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-left"
+                                viewBox="-20 -15 60 50">
+                                <path d="M17 7H2M8 1L2 7l6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="first-bestseller-product-list">
+
+
+                        
+                        <div class="first-bestseller-product-list-for-a first-product-of-first-BS"><a href=""
+                                class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="first-product">
+                                <h2 class="product-title">FIRST PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart" data-product-id="1"
+                                data-product-name="FIRST PRODUCT" data-product-price="1000"
+                                data-product-image="https://source.unsplash.com/250x250/?premium-made-food-product"></i>
+                        </div>
+
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="second-product">
+                                <h2 class="product-title">Second PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart" data-product-id="2"
+                                data-product-name="Second PRODUCT" data-product-price="1000"
+                                data-product-image="https://source.unsplash.com/250x250/?premium-made-food-product"></i>
+                        </div>
+
+
+
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="third-product">
+                                <h2 class="product-title">Third PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+
+                        </div>
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fourth-product">
+                                <h2 class="product-title">Fouth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+
+                        </div>
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fifth-product">
+                                <h2 class="product-title">Fifth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+
+                        </div>
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="sixth-product">
+                                <h2 class="product-title">Sixth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+
+                        </div>
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="seventh-product">
+                                <h2 class="product-title">Seventh PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+
+                        </div>
+                        <div class="first-bestseller-product-list-for-a"><a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="eight-product">
+                                <h2 class="product-title">Eight PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+
+                        </div>
+                    </div>
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-ofBS">
+                        <button class="prev-next-button bestseller-right-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-right"
+                                viewBox="-20 -15 60 50">
+                                <path d="M0 7h15M9 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- SECOND ROW OF PRODUCTS -->
+            <div class="space-for-all-bestseller actually-second-bestseller" id="secondBestSeller">
+                <h2 class="space-for-all-bestseller-for-h2">Type Of Food Of Second Bestseller</h2>
+                <div class="first-bestseller second-bestseller">
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-of-2ndBS">
+                        <button class="prev-next-button second-bestseller-left-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-left"
+                                viewBox="-20 -15 60 50">
+                                <path d="M17 7H2M8 1L2 7l6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="first-bestseller-product-list actually-second-bestseller-product-list">
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="first-product">
+                                <h2 class="product-title">FIRST PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="second-product">
+                                <h2 class="product-title">Second PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="third-product">
+                                <h2 class="product-title">Third PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fourth-product">
+                                <h2 class="product-title">Fourth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fifth-product">
+                                <h2 class="product-title">Fifth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="sixth-product">
+                                <h2 class="product-title">Sixth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="product.html" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="seventh-product">
+                                <h2 class="product-title">Seventh PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-second-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-food-product" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="eigth-product">
+                                <h2 class="product-title">Eight PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                    </div>
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-of-2ndBS">
+                        <button class="prev-next-button second-bestseller-right-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-right"
+                                viewBox="-20 -15 60 50">
+                                <path d="M0 7h15M9 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- THIRD ROW OF PRODUCTS -->
+            <div class="space-for-all-bestseller actually-third-bestseller" id="thirdBestSeller">
+                <h2 class="space-for-all-bestseller-for-h2">Type Of Food Of Third Bestseller</h2>
+                <div class="first-bestseller third-bestseller">
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-of-3rdBS">
+                        <button class="prev-next-button third-bestseller-left-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-left"
+                                viewBox="-20 -15 60 50">
+                                <path d="M17 7H2M8 1L2 7l6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="first-bestseller-product-list actually-third-bestseller-product-list">
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="first-product">
+                                <h2 class="product-title">First PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="second-product">
+                                <h2 class="product-title">Second PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="third-product">
+                                <h2 class="product-title">Third PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fourth-product">
+                                <h2 class="product-title">Fourth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fifth-product">
+                                <h2 class="product-title">Fifth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="sixth-product">
+                                <h2 class="product-title">Sixth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="seventh-product">
+                                <h2 class="product-title">Seventh PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-third-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-home-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="eight-product">
+                                <h2 class="product-title">Eight PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                    </div>
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-of-3rdBS">
+                        <button class="prev-next-button third-bestseller-right-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-right"
+                                viewBox="-20 -15 60 50">
+                                <path d="M0 7h15M9 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FOURTH ROW OF PRODUCTS -->
+            <div class="space-for-all-bestseller actually-forth-bestseller" id="forthBestSeller">
+                <h2 class="space-for-all-bestseller-for-h2">Type Of Food Of Forth Bestseller</h2>
+                <div class="first-bestseller forth-bestseller">
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-of-4thBS">
+                        <button class="prev-next-button forth-bestseller-left-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-left"
+                                viewBox="-20 -15 60 50">
+                                <path d="M17 7H2M8 1L2 7l6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="first-bestseller-product-list actually-forth-bestseller-product-list">
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="first-product">
+                                <h2 class="product-title">First PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="second-product">
+                                <h2 class="product-title">Second PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="third-product">
+                                <h2 class="product-title">Third PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fourth-product">
+                                <h2 class="product-title">Fourth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="fifth-product">
+                                <h2 class="product-title">Fifth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="sixth-product">
+                                <h2 class="product-title">Sixth PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="seventh-product">
+                                <h2 class="product-title">Seventh PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                        <div class="first-bestseller-product-list-for-a actually-fourth-bestseller-product-list-for-a">
+                            <a href="" class="product-box"><img
+                                    src="https://source.unsplash.com/250x250/?premium-made-food" width="250px"
+                                    class="first-bestseller-product-listImage product-img" alt="eight-product">
+                                <h2 class="product-title">Eight PRODUCT</h2>
+                            </a>
+                            <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                        </div>
+                    </div>
+                    <div class="space-for-bestseller-left-right-Arrow left-and-right-arrow-of-4thBS">
+                        <button class="prev-next-button forth-bestseller-right-arrow">
+                            <svg focusable="false" width="60" height="50" class="icon-nav-arrow-right"
+                                viewBox="-20 -15 60 50">
+                                <path d="M0 7h15M9 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ABOUT FOR ALL PRODUCTS -->
+            <div class="space-for-about-product">
+                <div class="about-All-product">
+                    <div class="about-sugar about-product">
+                        <img src="IMG/no sugar.png" alt="refined sugar" width="100px">
+                        <p>No Refined Sugar</p>
+                    </div>
+                    <div class="about-recipe about-product">
+                        <img src="IMG/traditional recipe.png" alt="traditional recipe" width="100px">
+                        <p>Traditional Recipe</p>
+                    </div>
+                    <div class="about-M-i-I about-product">
+                        <img src="IMG/make-in-india.jpg" alt="made in india" height="100px">
+                        <p>Make In India</p>
+                    </div>
+                    <div class="about-farm about-product">
+                        <img src="IMG/farm soucred.png" alt="farm sourced" width="100px">
+                        <p>Farm Sourced</p>
+                    </div>
+                    <div class="about-local-handmade about-product">
+                        <img src="IMG/local & homemade.png" alt="local and handmade" width="100px">
+                        <p>Local & Handmade</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <%- include("partials/footer") %>
+
+            <!-- SCRIPTS -->
+            <script src="SCRIPT/headerFooter.js"></script>
+            <script src="SCRIPT/home.js"></script>
+            <script src="SCRIPT/cart.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <img src="https://source.unsplash.com/1348x449/? home-made-food-product-poster " alt="UNSPLASH LINK"> -->

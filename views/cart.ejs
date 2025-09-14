@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main-content">
+            <h1>Shopping cart</h1>
+
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Product</th>
+                        <th style="width: 15%;">Price</th>
+                        <th style="width: 20%;">Quantity</th>
+                        <th style="width: 20%;">Total</th>
+                        <th style="width: 5%;"></th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <div class="divider"></div>
+
+            <div class="customer-review">
+                <img src="https://via.placeholder.com/150" alt="Marie C.">
+                <div class="review-content">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-title">Absolutely Stunning</div>
+                    <div class="review-text">The dress I purchased from this fashion brand exceeded all my expectations.
+                        The craftsmanship and attention to detail were impeccable. The fabric felt luxurious and the fit
+                        was perfect.</div>
+                    <div class="reviewer-name">Marie C.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="shipping-estimate">
+                <h3>Estimate Shipping</h3>
+            </div>
+
+            <div class="summary-details">
+                <div class="row">
+                    <span>Quantity:</span>
+                    <span id="summary-quantity">0 item(s)</span>
+                </div>
+                <div class="row">
+                    <span>Total discount:</span>
+                    <span>Saving &#8377;<span id="summary-discount">0.00</span></span>
+                </div>
+                <div class="row">
+                    <span>Subtotal:</span>
+                    <span>&#8377;<span id="summary-subtotal">0.00</span></span>
+                </div>
+                <div class="row">
+                    <span>Taxes:</span>
+                    <span>Taxes included</span>
+                </div>
+                <div class="row">
+                    <span>Shipping:</span>
+                    <span>&#8377;<span id="summary-shipping">0.00</span></span>
+                </div>
+                <div class="row">
+                    <span>Total weight:</span>
+                    <span><span id="summary-weight">0.0</span> gram</span>
+                </div>
+                <div class="total-row">
+                    <span>Total price:</span>
+                    <span class="total-price">&#8377;<span id="summary-total">0.00</span></span>
+                </div>
+                <div class="taxes-note">
+                    Taxes and shipping calculated at checkout
+                </div>
+            </div>
+
+            <div class="terms-checkbox">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree with the <a href="#">terms and conditions</a>.</label>
+            </div>
+
+            <button class="checkout-btn">PLACE ORDER</button>
+            <button class="clear-cart-btn" style="background-color: #888; color: #fff; margin-top: 10px;">Clear
+                Cart</button>
+
+            <div class="payment-info">
+                Payment info
+                <div class="card-icons">
+                    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                    <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
+                    <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex">
+                    <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover">
+                </div>
+                Accepted Payment Methods
+            </div>
+        </div>
+    </div>
+
+    <script src="SCRIPT/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="CSS/login-style.css"> -->
+    <link rel="stylesheet" href="CSS/loginSignup.css">
+    <link rel="stylesheet" href="RESPONSIVE/loginMedia.css">
+    <link rel="stylesheet" href="CSS/header-footer.css">
+    <link rel="stylesheet" href="RESPONSIVE/headerFooterMedia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include("partials/header") %>
+
+        <!-- MAIN -->
+        <main>
+            <div class="login">
+                <div class="for-h1-of-login">
+                    <h1>Login</h1>
+                </div>
+                <div class="for-p-note-for-filling">
+                    <p>Please enter your e-mail or phone number and password:</p>
+                </div>
+                <form action="https://formspree.io/f/xzbqwzay" method="POST" id="login-form" style="margin-top: 50px;">
+                    <label for="email"></label>
+                    <div class="space-for-email">
+                        <input type="email" class="e-mail" id="email" name="email" placeholder="Email or Phone Number"
+                            required><br><br>
+                    </div>
+
+                    <label for="password"></label>
+                    <div class="space-for-password">
+                        <input type="password" class="pass-code" id="password" name="password" placeholder="Password"
+                            required><br><br>
+                    </div>
+
+                    <div class="space-for-submit"><input type="submit" class="submit" value="Login"></div>
+                </form>
+                <div class="for-new-acc">
+                    <p>New Customer?</p><span>_</span><a href="signup">
+                        <p>Creat an account</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <%- include("partials/footer") %>
+
+            <script src="SCRIPT/headerFooter.js"></script>
+</body>
+
+</html>

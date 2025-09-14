@@ -1,0 +1,74 @@
+<!-- Manage Addresses (moved from your original addresses page) -->
+<div class="section-header">
+    <h2 id="address-header">Manage Addresses</h2>
+</div>
+
+<div class="form-container">
+    <a href="#" class="add-address-link" id="add-address-link">
+        + ADD A NEW ADDRESS
+    </a>
+</div>
+
+<div class="address-form-container" style="display: none;">
+    <div class="form-container">
+        <h3 id="form-title">ADD A NEW ADDRESS</h3>
+        <a href="#" class="use-current-location">
+            <i class='bx bx-location-plus'></i> Use my current location
+        </a>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="text" id="mobile" placeholder="10-digit mobile number">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="pincode" placeholder="Pincode">
+            </div>
+            <div class="form-group">
+                <input type="text" id="locality" placeholder="Locality">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <textarea id="address" placeholder="Address (Area and Street)"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="city" placeholder="City/District/Town">
+            </div>
+            <div class="form-group">
+                <select id="state">
+                    <option>--Select State--</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Haryana">Haryana</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="landmark" placeholder="Landmark (Optional)">
+            </div>
+            <div class="form-group">
+                <input type="text" id="altPhone" placeholder="Alternate Phone (Optional)">
+            </div>
+        </div>
+        <div class="address-type">
+            <label><input type="radio" name="addressType" value="Home" checked> Home</label>
+            <label><input type="radio" name="addressType" value="Work"> Work</label>
+        </div>
+        <div class="form-buttons">
+            <button class="save-btn" id="save-address-btn">SAVE</button>
+            <button class="cancel-btn" id="cancel-form-btn">CANCEL</button>
+        </div>
+    </div>
+</div>
+
+<div class="address-list-container">
+    <div id="address-list"></div>
+</div>
+
+<!-- The addresses page behavior moved to /public/addresses.js -->

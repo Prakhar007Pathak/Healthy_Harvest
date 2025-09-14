@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* ---------- From your profile page ---------- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        .form-group input:disabled {
+            background-color: #f7f9fc;
+            color: #aaa;
+            border-color: #e0e0e0;
+        }
+
+        .profile-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #e0e0e0;
+            background-color: #f7f9fc;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .user-info .name {
+            font-weight: bold;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #333;
+            border-left: 3px solid transparent;
+            margin-bottom: 5px;
+            transition: background-color 0.3s, border-left-color 0.3s;
+        }
+
+        .sidebar-menu a.active {
+            background-color: #fff3e0;
+            border-left-color: #ff8700;
+            color: #ff8700;
+        }
+
+        .sidebar-menu a:hover:not(.active) {
+            background-color: #ffebd0;
+        }
+
+        .sidebar-menu i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .sidebar-menu-title {
+            padding: 10px 15px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .logout-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: #d32f2f;
+            text-decoration: none;
+            margin-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .logout-link i {
+            margin-right: 15px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .section-header a {
+            text-decoration: none;
+            color: #ff8700;
+            font-weight: bold;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff8700;
+            box-shadow: 0 0 5px rgba(255, 135, 0, 0.5);
+        }
+
+        .gender-group {
+            margin-bottom: 20px;
+        }
+
+        .gender-group label {
+            margin-right: 20px;
+        }
+
+        .gender-group input[type="radio"] {
+            accent-color: #ff8700;
+        }
+
+        .gender-group input[type="radio"]:disabled {
+            accent-color: #e0e0e0;
+        }
+
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .deactivate-links {
+            margin-top: 40px;
+        }
+
+        .deactivate-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #2196f3;
+            text-decoration: none;
+        }
+
+        .deactivate-links a.delete {
+            color: #d32f2f;
+        }
+
+        .edit-buttons {
+            display: none;
+            margin-top: 10px;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .edit-buttons button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .save-btn {
+            background-color: #2196f3;
+            color: #fff;
+        }
+
+        .cancel-btn {
+            background-color: #f0f0f0;
+            color: #555;
+        }
+
+        /* ---------- From your addresses page (kept) ---------- */
+        .form-container {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .form-container h3 {
+            margin-top: 0;
+        }
+
+        .form-container .use-current-location {
+            color: #2196f3;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .address-type {
+            margin-top: 10px;
+        }
+
+        .address-type label {
+            margin-right: 20px;
+        }
+
+        .form-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-buttons button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .address-list-container {
+            margin-top: 20px;
+        }
+
+        .address-card {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .address-card .address-label {
+            display: inline-block;
+            background-color: #f0f4f7;
+            color: #555;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .address-card h4 {
+            margin: 10px 0 5px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .address-card p {
+            margin: 0;
+            color: #777;
+        }
+
+        .address-card .options-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .address-card .options-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .address-card .options-menu {
+            display: none;
+            position: absolute;
+            top: 25px;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            width: 100px;
+            z-index: 10;
+        }
+
+        .address-card .options-menu a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .address-card .options-menu a:hover {
+            background-color: #f0f2f5;
+        }
+
+        /* small responsive tweak */
+        @media (max-width: 900px) {
+            .profile-container {
+                margin: 10px;
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+        }
+    </style>
+
+    <!-- JS initializers (profile/addresses) + router -->
+    <script defer src="SCRIPT/profile.js"></script>
+    <script defer src="SCRIPT/addresses.js"></script>
+    <script defer src="SCRIPT/main.js"></script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Sidebar (kept exactly like your design) -->
+        <div class="sidebar">
+            <div class="user-info">
+                <img src="https://via.placeholder.com/50" alt="Profile Picture">
+                <div>
+                    <div style="color: #555;">Hello,</div>
+                    <div class="name">Prakhar Pathak</div>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <div class="sidebar-menu-title">My Orders</div>
+                <a href="#"><i class='bx bx-archive'></i> My Orders</a>
+
+                <div class="sidebar-menu-title">My Wishlist</div>
+                <a href="#"><i class='bx bx-heart'></i> My Wishlist</a>
+
+                <div class="sidebar-menu-title">Account Settings</div>
+                <!-- Important: href + data-route used by JS router -->
+                <a href="/account" data-route="/account/profile-info" class="active"><i class='bx bx-user-circle'></i>
+                    Profile Information</a>
+                <a href="/account/addresses" data-route="/account/addresses"><i class='bx bx-map'></i> Manage
+                    Addresses</a>
+
+                <div class="sidebar-menu-title">Payments</div>
+                <a href="#"><i class='bx bx-wallet'></i> Saved UPI</a>
+                <a href="#"><i class='bx bx-credit-card'></i> Saved Cards</a>
+
+                <a href="#" class="logout-link"><i class='bx bx-log-out'></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Right side content (initially include profileInfo partial) -->
+        <div id="content-area" class="main-content">
+            <%- include('partials/profileInfo') %>
+        </div>
+    </div>
+</body>
+
+</html>

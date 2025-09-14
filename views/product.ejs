@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/product.css">
+    <link rel="stylesheet" href="RESPONSIVE/productMedia.css">
+    <link rel="stylesheet" href="CSS/header-footer.css">
+    <link rel="stylesheet" href="RESPONSIVE/headerFooterMedia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <title><%= title %></title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include("partials/header") %>
+
+        <!-- MAIN -->
+        <main>
+            <div class="second-main">
+                <!-- ITS IMG SIDE TEMPLATE(LEFT SIDE) -->
+                <div class="main-left-product">
+                    <div class="selector-for-images">
+                        <ul class="ul-of-img-selector">
+                            <li><a href="https://source.unsplash.com/500x500/? home-made-food-product-poster"
+                                    target="imgBox"><img
+                                        src="https://source.unsplash.com/500x500/? home-made-food-product-poster"
+                                        width="90px" height="90px"></a></li>
+                            <li><a href="https://source.unsplash.com/500x500/? home-food-product-poster"
+                                    target="imgBox"><img
+                                        src="https://source.unsplash.com/500x500/? home-food-product-poster"
+                                        width="90px" height="90px"></a></li>
+                            <li><a href="https://source.unsplash.com/500x500/? food-product-poster" target="imgBox"><img
+                                        src="https://source.unsplash.com/500x500/? food-product-poster" width="90px"
+                                        height="90px"></a></li>
+                        </ul>
+                        <div class="imgBox"><img
+                                src="https://source.unsplash.com/500x500/? home-made-food-product-poster" width="500px"
+                                height="500px" class="product-img"></div>
+                    </div>
+                </div>
+                <!-- ITS DETAIL SIDE TEMPLATE(RIGHT SIDE) -->
+                <div class="main-right-product">
+                    <div class="name-and-prize">
+                        <h2 class="product-title">Full Product Detailed Name</h2>
+                        <p class="productPrice">₹ 100</p>
+                    </div>
+                    <hr class="class-for-media-hr">
+                    <div class="flavours">
+                        <div class="for-chooseing-flavours">
+                            <p>Choose Your Flavours:</p><span>_</span>
+                            <p>Flavours Name</p>
+                        </div>
+                        <div class="flavours-name flav-name-1st">
+
+                            <button class="first-flavour flav-name"><a href="#">
+                                    <p>Flavour Name</p>
+                                </a></button>
+                            <button class="second-flavour flav-name"><a href="#">
+                                    <p>Flavour Name</p>
+                                </a></button>
+                        </div>
+                        <div class="flavours-name flav-name-2nd">
+                            <button class="third-flavour flav-name"><a href="#">
+                                    <p>Flavour Name</p>
+                                </a></button>
+                            <button class="fourth-flavour flav-name"><a href="#">
+                                    <p>Flavour Name</p>
+                                </a></button>
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <p>Quantity:</p>
+                        <form class="quantity-inc-dec-form">
+                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-
+                            </div>
+                            <input type="number" id="quantity-number" minlength="1" />
+                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="add-to-cart">
+                        <div class="productDetail">
+                            <img src="https://source.unsplash.com/500x500/? home-made-food-product-poster"
+                                alt="product-img" class="product-img imgforhide">
+                            <h2 class="product-title titleforhide">Full Product Detailed Name</h2>
+                        </div>
+                        <p class="price priceforhide">₹ 100</p>
+                        <input type="submit" class="add-cart-button" value="ADD TO CART">
+                    </div>
+                    <div class="buy-now">
+                        <form action="#" method="post">
+                            <input type="submit" class="buy-now-button" value="BUY NOW">
+                        </form>
+                    </div>
+                    <hr class="class-for-media-sec-hr">
+                    <div class="for-whats-inside discription">
+                        <p><b>What is in it?: </b> Name of all ingredients</p>
+                    </div>
+                    <div class="for-the-goodness discription">
+                        <p><b>The Goodness: </b> 100% Natural | No Refined Sugar | Farm Sourced | Handmade</p>
+                    </div>
+                    <div class="for-flavours">
+                        <p><b>Available in n flavours -</b></p>
+                        <br>
+                        <p class="p-of-flavours">➥ Flavour Name</p>
+                        <p class="p-of-flavours">➥ Flavour Name</p>
+                        <p class="p-of-flavours">➥ Flavour Name</p>
+                        <p class="p-of-flavours">➥ Flavour Name</p>
+                    </div>
+                    <div class="for-highlights">
+                        <p><b>HIGHLIGHTS:</b></p>
+                        <br>
+                        <p>Product Name : A spicy sour treat made with fresh tamarind, jaggery, chilli and curry leaves
+                            straight out of your childhood. Finally, a healthy candy so mouthwatering that you just
+                            can’t
+                            get enough! (it is just an example)...</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="bottom-main-above-hr">
+            <!-- BOTTOM MAIN FOR SIMILAR PRODUCTS-->
+            <div class="bottom-main">
+                <div class="space-for-all-like-products" id="likeProducts">
+                    <!-- SIMILAR PRODUCTS HEADINGS -->
+                    <h2 class="main-heading-of-like-products">You May Also Like</h2>
+                    <div class="like-products">
+                        <!-- LEFT BUTTON -->
+                        <div class="space-for-like-products-left-right-Arrow left-and-right-arrow-ofLP">
+                            <button class="prev-next-button like-products-left-arrow">
+                                <svg focusable="false" width="60" height="50" class="icon-nav-arrow-left"
+                                    viewBox="-20 -15 60 50">
+                                    <path d="M17 7H2M8 1L2 7l6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- ALL SIMILAR PRODUCTS -->
+                        <div class="like-products-list">
+
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">FIRST PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">SECOND PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">THIRD PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">FOURTH PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">FIFTH PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">SIXTH PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">SEVENTH PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                            <div class="like-products-list-for-a"><a href="" class="product-box"><img
+                                        src="https://source.unsplash.com/250x250/?premium-made-food-product"
+                                        width="250px" class="like-products-listImage product-img" alt="first-product">
+                                    <h2 class="product-title">EIGHT PRODUCT</h2>
+                                </a>
+                                <span class="price">₹ 1000</span><i class="bx bx-shopping-bag add-cart"></i>
+                            </div>
+                        </div>
+                        <!-- RIGHT BUTTON -->
+                        <div class="space-for-like-products-left-right-Arrow left-and-right-arrow-ofLP">
+                            <button class="prev-next-button like-products-right-arrow">
+                                <svg focusable="false" width="60" height="50" class="icon-nav-arrow-right"
+                                    viewBox="-20 -15 60 50">
+                                    <path d="M0 7h15M9 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <%- include("partials/footer") %>
+        
+            <!-- SCRIPTS -->
+            <script src="SCRIPT/product.js"></script>
+            <script src="SCRIPT/headerFooter.js"></script>
+            <script src="SCRIPT/cart.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.selector-for-images a').mouseover(function (e) {
+                        e.preventDefault();
+                        $('.imgBox img').attr("src", $(this).attr("href"));
+                    })
+                })
+            </script>
+</body>
+
+</html>
